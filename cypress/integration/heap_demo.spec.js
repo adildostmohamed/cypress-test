@@ -20,7 +20,7 @@ describe('Cypress + Heap POC', function() {
   })
 
   it('Should search multiple times', () => {
-    const loopCount = 5;
+    const loopCount = 50;
     const searchTerms = ['Max Cooper', 'Erased Tapes', 'BRUK', 'hijmer', 'Safer At Night', 'Max Cooper', 'Erased Tapes', 'BRUK', 'hijmer', 'Safer At Night']
     for(let i = 0; i < loopCount; i++) {
       const searchTerm = searchTerms[i]
