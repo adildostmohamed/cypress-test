@@ -20,10 +20,10 @@ describe('Cypress + Heap POC', function() {
   // })
 
   it('Should search multiple times', () => {
-    const loopCount =  100;
+    const loopCount =  500;
     const searchTerms = ['Max Cooper', 'Erased Tapes', 'BRUK', 'hijmer', 'Safer At Night', 'Max Cooper', 'Erased Tapes', 'BRUK', 'hijmer', 'Safer At Night']
     for(let i = 0; i < loopCount; i++) {
-      const searchTerm = 'BRUK'
+      const searchTerm = searchTerms[i]
       cy.visit(appUrl)
       cy.get('.btn--search-alt').click()
       cy.get('.search-form__input').type(searchTerm).type('{enter}')
