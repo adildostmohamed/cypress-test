@@ -2,10 +2,11 @@
   "name": "cypress-test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:run": "node ./index.js"
+    "start": "node ./server.js",
+    "cypress:run": "node ./server.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,7 @@
     "url": "https://github.com/adildostmohamed/cypress-test/issues"
   },
   "homepage": "https://github.com/adildostmohamed/cypress-test#readme",
-  "devDependencies": {
+  "dependencies": {
     "cypress": "^3.4.1"
   }
 }

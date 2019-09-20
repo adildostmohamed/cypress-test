@@ -1,7 +1,9 @@
+import heapIdCookie from '../../cookie';
 describe('Cypress + Heap POC', function() {
-  const appUrl = 'http://localhost:3000/';
+  const appUrl = 'https://5726cb2b.ngrok.io';
   beforeEach(() => {
     cy.visit(appUrl);
+    cy.setCookie(heapIdCookie.name, heapIdCookie.value);
   });
 
   // it('Artist page', function() {
