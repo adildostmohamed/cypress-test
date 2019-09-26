@@ -1,6 +1,6 @@
 import heapIdCookie from '../../cookie';
 describe('Cypress + Heap POC', function() {
-  const appUrl = 'https://5726cb2b.ngrok.io';
+  const appUrl = 'https://e95e63e6.ngrok.io';
   beforeEach(() => {
     cy.visit(appUrl);
     cy.setCookie(heapIdCookie.name, heapIdCookie.value);
