@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/adildostmohamed/cypress-test#readme",
   "dependencies": {
-    "cypress": "^3.4.1"
+    "cypress": "^3.4.1",
+    "node-cron": "^2.0.3"
   }
 }
