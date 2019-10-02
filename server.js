@@ -1,3 +1,4 @@
+require('dotenv').config();
 const cron = require('node-cron');
 const searchSubmissionTrigger = require('./triggers/search_submission_trigger');
 const visitArtistPageTrigger = require('./triggers/visit_artist_page_trigger');
