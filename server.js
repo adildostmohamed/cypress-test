@@ -1,26 +1,23 @@
-const cypress = require('cypress');
 const cron = require('node-cron');
+const searchSubmissionTrigger = require('./triggers/search_submission_trigger');
+const visitArtistPageTrigger = require('./triggers/visit_artist_page_trigger');
 
-const cypress_trigger = () => {
-  return cypress
-    .run({
-      spec: './cypress/integration/heap_demo.spec.js',
-      config: {
-        projectId: '56xjvw',
-        video: false
-      },
-      key: '808cba80-9c99-4a41-bdbf-5953f1406ef7',
-      record: true
-    })
-    .then(results => {
-      console.log(results);
-    })
-    .catch(err => {
-      console.error(err);
-    });
-};
+// const searchSubmissionSpec = path.join(
+//   './cypress',
+//   'integration',
+//   'search_submission.spec.js'
+// );
+// const searchSubmissionTestName = 'Search Submission';
+// const searchSubmissionTest = cypress_trigger(
+//   searchSubmissionSpec,
+//   searchSubmissionTestName
+// );
 
-cron.schedule('*/2 * * * *', () => {
-  console.log('TIME TO RUN!');
-  cypress_trigger();
-});
+// cron.schedule('*/2 * * * *', () => {
+//   console.log('TIME TO RUN!');
+//   searchSubmissionTrigger();
+//   visitArtistPageTrigger();
+// });
+
+searchSubmissionTrigger();
+visitArtistPageTrigger();
